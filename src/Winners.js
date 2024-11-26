@@ -14,7 +14,7 @@ export function Sendtofindwinner(event) {
     document.getElementById("hidemedal3").style.display="none";
     axios({
     method: "POST",
-    url: '/rating',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
     data: { selectwinner : document.getElementById("hidemytext").value }
 }).then((response) => {
         document.getElementById("lupaid").style.display = "block";
@@ -45,7 +45,7 @@ export function Sendtofindwinner(event) {
 export function Allwinners() {
     axios({
         method: "POST",
-        url: '/rating',
+        url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
         data: { winners : '1' }
     }).then((response) => {
     document.getElementById("winner1txt").innerHTML = response['data']["5"]+"$";
