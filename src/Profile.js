@@ -3,7 +3,7 @@ let idi =  10;
 export function MakeProf() {
 axios({
     method: "POST",
-    url: '/profile',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/profile',
     data: { friends : idi }
 }).then((response) => {
     let data = response['data'];
@@ -89,7 +89,7 @@ axios({
 });
 axios({
     method: "POST",
-    url: '/profile',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/profile',
     data: { profilename : idi }
 }).then((response) => {document.getElementById("profilename").innerHTML = response['data']['1'];
 });
@@ -102,7 +102,7 @@ export function Sendriddle(event) {
     document.getElementById("riddlemes").blur();
     axios({
         method: "POST",
-        url: '/riddle',
+        url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/riddle',
         data: { telegram : idi, riddle : val }
     }).then((response) => {
         document.getElementById("pushnotif").style.display = "none";
