@@ -13,6 +13,14 @@ axios({
 });
 console.log(nm);
 var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
+    axios({
+    method: "POST",
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
+    data: { actname: idi}
+}).then((response) => {
+    nm = response['data']['1'];
+    document.getElementById("hidenname").innerHTML = nm;
+});
     ws.onmessage = async function(event) {
     var chat = document.getElementById("topfive");
     var nickname = document.createElement('a');
