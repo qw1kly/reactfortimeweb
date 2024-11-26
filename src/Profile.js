@@ -1,5 +1,5 @@
 import axios from 'axios';
-let idi =  10;
+const idi = document.getElementById("invid").innerHTML;
 export function MakeProf() {
 axios({
     method: "POST",
