@@ -17,7 +17,7 @@ import { somedo, scrollToBottom } from "./scroll";
 var autoScroll = true;
  
 document.getElementById('topfive').addEventListener('scroll', (e) => {
-    autoScroll = somedo();
+    somedo();
 });
 
 
