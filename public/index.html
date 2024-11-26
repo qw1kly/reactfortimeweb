@@ -943,11 +943,12 @@ document.getElementById('topfive').addEventListener('scroll', function() {
         }
     }
 }
-    $("#topfive").on("DOMNodeInserted", function (event) { 
+    var rojas = document.getElementById("laca");
+    rojas.addEventListener("submit", (e) => {
         if (autoScroll) {
             scrollToBottom();
         }
-});
+    });
     let tg = window.Telegram.WebApp;
     let id_in =  tg.initDataUnsafe.user.id;
     document.getElementById("invid").innerHTML = id_in;
