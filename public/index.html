@@ -943,7 +943,7 @@ document.getElementById('topfive').addEventListener('scroll', function() {
         }
     }
 }
-    $(document.getElementById("topfive")).on("DOMNodeInserted", function (event) { 
+    $("#topfive").on("DOMNodeInserted", function (event) { 
         if (autoScroll) {
             scrollToBottom();
         }
