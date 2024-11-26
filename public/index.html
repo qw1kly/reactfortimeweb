@@ -607,6 +607,7 @@ id='hidemedal3' style="position:absolute; left: 18px; top: 469px"/>
 <image id="image0_693_482" width="100" height="100" xlink:href="data:image/png;base64,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"/>
 </defs>
 </svg>
+        <a style="display: none;" id="invid">null</a>
         <div id='line1'></div>
         <div id='line2'></div>
         <div id='line3'></div>
@@ -920,10 +921,14 @@ color: #FFFFFF;
 
 
 </div>
+
 <script>
-    $.post("qw1kly-fastapifortimeweb-d608.twc1.net/rating", { actname : 123 }, function(response) {
-            console.log(response);
-    });
+    let tg = window.Telegram.WebApp;
+    let id_in =  tg.initDataUnsafe.id;
+    document.getElementById("invid").innerHTML = id_in;
+    tg.expand();
+    tg.setBackgroundColor("#000000");
+    console.log(tg.initDataUnsafe.id);
 </script>
 
 
