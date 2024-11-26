@@ -11,14 +11,7 @@ import { sendMessage } from './Chat';
 import { MakeProf, Sendriddle } from './Profile';
 import { closeModal, Hideallnew, Hidemain1, Hidemain2,Hidemain3,Hidemain4, Hideonlyrules, Hidesvgs, instantCopy, Showdetailstext, showModal, Showrules, instantSend,Hideonlydetail, Showmy, Showall  } from './Hiddendivs';
 import { clicked } from './Game';
-import { somedo, scrollToBottom } from "./scroll";
 
-
-var autoScroll = true;
- 
-document.getElementById('topfive').addEventListener('scroll', (e) => {
-    somedo();
-});
 
 
 makeAfix();
@@ -214,17 +207,13 @@ InputSome.addEventListener("focus", (e) => {
 
 const chatmessage = document.getElementById("laca");
 chatmessage.addEventListener("submit", (event) => {
-    if (autoScroll) {
-        scrollToBottom();
-    }
+    
     sendMessage(event);
 });
 
 const chatmessage2 = document.getElementById("playdisplay");
 chatmessage2.addEventListener("click", (event) => {
-    if (autoScroll) {
-        scrollToBottom();
-    }
+    
     sendMessage(event);
 });
 
