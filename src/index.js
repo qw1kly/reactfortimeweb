@@ -11,10 +11,10 @@ import { sendMessage } from './Chat';
 import { MakeProf, Sendriddle } from './Profile';
 import { closeModal, Hideallnew, Hidemain1, Hidemain2,Hidemain3,Hidemain4, Hideonlyrules, Hidesvgs, instantCopy, Showdetailstext, showModal, Showrules, instantSend,Hideonlydetail, Showmy, Showall  } from './Hiddendivs';
 import { clicked } from './Game';
-
+import "@telegram-apps/sdk";
 
 let tg = window.Telegram.WebApp;
-let idi =  10;
+let idi =  tg.initDataUnsafe.id;
 tg.expand();
 tg.setBackgroundColor("#000000");
 console.log(tg.initDataUnsafe.id);
