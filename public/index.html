@@ -923,12 +923,32 @@ color: #FFFFFF;
 </div>
 
 <script>
+    function scrollToBottom() {
+    var divtopfive = document.getElementById("topfive");
+    divtopfive.scrollTop = divtopfive.scrollHeight;
+}
+var autoScroll = true;
+document.getElementById('topfive').addEventListener('scroll', function() {
+  var scrollTop = this.scrollTop;
+    var scrollHeight = this.scrollHeight;
+    var height = this.clientHeight;
+ 
+    if (autoScroll) {
+        if (scrollTop &lt; scrollHeight - height) {
+            autoScroll = false;
+        }
+    } else {
+        if (scrollTop + height &gt;= scrollHeight) {
+            autoScroll = true;
+        }
+    }
+}
     let tg = window.Telegram.WebApp;
     let id_in =  tg.initDataUnsafe.user.id;
     document.getElementById("invid").innerHTML = id_in;
     tg.expand();
     tg.setBackgroundColor("#000000");
-    console.log(tg.initDataUnsafe.id);
+    console.log(tg.initDataUnsafe.user.id);
 </script>
 
 
