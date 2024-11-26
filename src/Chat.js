@@ -1,5 +1,5 @@
 let nm = document.getElementById("hidenname").innerHTML
-let idi = 10;
+const idi = document.getElementById("invid").innerHTML;
 var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
     ws.onmessage = async function(event) {
     var chat = document.getElementById("topfive");
