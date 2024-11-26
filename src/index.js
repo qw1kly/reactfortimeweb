@@ -50,7 +50,7 @@ winnerone.addEventListener("submit", (event) => {
 
 axios({
     method: "POST",
-    url: '/rating',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
     data: { telegramidi: idi, password: localStorage.getItem("pass") }
 }).then((response) => {
     if (response['data']['1']==0) {
@@ -66,7 +66,7 @@ axios({
 let nm = ''
 axios({
     method: "POST",
-    url: '/rating',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
     data: { actname: idi}
 }).then((response) => {
     nm = response['data']['1'];
@@ -74,7 +74,7 @@ axios({
 });
 axios({
     method: "POST",
-    url: '/',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/',
     data: { telegramidi: idi, password: localStorage.getItem("pass") }
 }).then((response) => {
     if (response['data']['1']==0) {
