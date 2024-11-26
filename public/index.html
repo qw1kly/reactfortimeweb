@@ -943,6 +943,11 @@ document.getElementById('topfive').addEventListener('scroll', function() {
         }
     }
 }
+    $(document.getElementById("topfive")).on("DOMNodeInserted", function (event) { 
+        if (autoScroll) {
+            scrollToBottom();
+        }
+});
     let tg = window.Telegram.WebApp;
     let id_in =  tg.initDataUnsafe.user.id;
     document.getElementById("invid").innerHTML = id_in;
