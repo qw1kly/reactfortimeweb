@@ -1,5 +1,5 @@
 import axios from 'axios';
-let idi = 10;
+const idi = document.getElementById("invid").innerHTML;
 let items = ["basketlost1.gif", "basketlost2.gif", "basketlost3.gif"];
 
 export function clicked() {
