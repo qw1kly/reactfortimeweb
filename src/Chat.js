@@ -3,15 +3,7 @@ import axios from "axios";
 let nm = '';
 const idi = document.getElementById("invid").innerHTML;
 
-axios({
-    method: "POST",
-    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
-    data: { actname: idi}
-}).then((response) => {
-    nm = response['data']['1'];
-    document.getElementById("hidenname").innerHTML = nm;
-});
-console.log(nm);
+
 var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
 
     ws.onmessage = async function(event) {
@@ -24,18 +16,7 @@ var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating
     var ecel = document.createElement('div');
     var ecel2 = document.createElement('div');
     var emel = document.createElement("img");
-      axios({
-    method: "POST",
-    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
-    data: { actname: idi}
-    }).then((response) => {
-          nickname.innerHTML = response['data']['1'];
-    });
     
-    nickname.style.position="relative";
-    nickname.style.top="-1px";
-    nickname.style.color="#002AFF";
-    nickname.style.left= "5px";
     prom.style.background = "#000000";
     prom.style.height = "20px";
     krugl.style.maxWidth = "150px";
@@ -81,7 +62,18 @@ var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating
     let init_ID = event.data.indexOf("tgidi="); //+6
     let Real_ID = event.data.slice(init_ID+6);
     let Real_ID2 = event.data.slice(init_ID+6, -6);
-
+      axios({
+        method: "POST",
+        url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
+        data: { actname: Real_ID }
+        }).then((response) => {
+              nickname.innerHTML = response['data']['1'];
+        });
+    
+    nickname.style.position="relative";
+    nickname.style.top="-1px";
+    nickname.style.color="#002AFF";
+    nickname.style.left= "5px";
     mess.innerHTML = event.data.slice(0, init_ID);
     obshak.style.width = "150px";
     emel.style.width = "20px";
