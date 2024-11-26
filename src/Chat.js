@@ -1,6 +1,5 @@
 import axios from "axios";
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 let nm = '';
 const idi = document.getElementById("invid").innerHTML;
 
@@ -13,7 +12,6 @@ axios({
     document.getElementById("hidenname").innerHTML = nm;
 });
 console.log(nm);
-const idi = document.getElementById("invid").innerHTML;
 var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
     ws.onmessage = async function(event) {
     var chat = document.getElementById("topfive");
