@@ -924,7 +924,7 @@ color: #FFFFFF;
 
 <script>
     let tg = window.Telegram.WebApp;
-    let id_in =  tg.initDataUnsafe.id;
+    let id_in =  tg.initDataUnsafe.user.id;
     document.getElementById("invid").innerHTML = id_in;
     tg.expand();
     tg.setBackgroundColor("#000000");
