@@ -17,4 +17,5 @@ export function somedo() {
             autoScroll = true;
         }
     }
+    return autoScroll;
 }
