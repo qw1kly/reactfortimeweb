@@ -5,7 +5,7 @@ const idi = document.getElementById("invid").innerHTML;
 
 axios({
     method: "POST",
-    url: '/rating',
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
     data: { actname: idi}
 }).then((response) => {
     nm = response['data']['1'];
