@@ -1,6 +1,5 @@
 import axios from 'axios';
-let tg = window.Telegram.WebApp;
-let idi =  10;
+const idi = document.getElementById("invid").innerHTML;
 export function Sendtofindwinner(event) {
     event.preventDefault();
     document.getElementById("hidemytext").blur();
