@@ -24,8 +24,14 @@ var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating
     var ecel = document.createElement('div');
     var ecel2 = document.createElement('div');
     var emel = document.createElement("img");
-
-    nickname.innerHTML = nm;
+      axios({
+    method: "POST",
+    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
+    data: { actname: idi}
+    }).then((response) => {
+          nickname.innerHTML = response['data']['1'];
+    });
+    
     nickname.style.position="relative";
     nickname.style.top="-1px";
     nickname.style.color="#002AFF";
@@ -132,14 +138,7 @@ var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating
 
 };
 export function sendMessage(event) {
-        axios({
-    method: "POST",
-    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
-    data: { actname: idi}
-}).then((response) => {
-    nm = response['data']['1'];
-    document.getElementById("hidenname").innerHTML = nm;
-});
+      
     var input = document.getElementById("messageText");
     if (input.value.length>0){
     ws.send(input.value+"tgidi="+idi);
