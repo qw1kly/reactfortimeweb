@@ -7,7 +7,7 @@ export function Savepass(event) {
     let pass = document.getElementById('passwordinput').value;
     axios({
         method: "POST",
-        url: '/',
+        url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/',
         data: { telegramidi: idi, password: pass }
     }).then((response) => {
         if (response['data']['1']==1) {
@@ -41,7 +41,7 @@ export function Name(event) {
     document.getElementById("nicknameinput").blur();
     axios({
         method: "POST",
-        url: '/register2',
+        url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/register2',
         data: {name: name, telegramtodelete: idi}
     }).then((response) => {
         if (response['data']['1'] == 0) {
@@ -79,7 +79,7 @@ export function Name(event) {
         document.getElementById("passwordinput2").blur();
         axios({
             method: "POST",
-            url: '/register2',
+            url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/register2',
             data: {password: pass, telegramtodelete: idi}
         }).then((response) => {
             if (response['data']['1']==1) {
