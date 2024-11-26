@@ -1,6 +1,6 @@
 let nm = document.getElementById("hidenname").innerHTML
 let idi = 10;
-var ws = new WebSocket("ws://127.0.0.1:8000/ws/rating");
+var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
     ws.onmessage = async function(event) {
     var chat = document.getElementById("topfive");
     var nickname = document.createElement('a');
