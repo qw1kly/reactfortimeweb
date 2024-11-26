@@ -8,7 +8,7 @@ export function clicked() {
       } else {
         axios({
             method: "POST",
-            url: '/game',
+            url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/game',
             data: { telegramid : idi, password: localStorage.getItem("pass") }
         }).then((response) => {
 
