@@ -13,7 +13,27 @@ import { closeModal, Hideallnew, Hidemain1, Hidemain2,Hidemain3,Hidemain4, Hideo
 import { clicked } from './Game';
 
 
-
+function scrollToBottom() {
+    var divtopfive = document.getElementById("topfive");
+    divtopfive.scrollTop = divtopfive.scrollHeight;
+}
+var autoScroll = true;
+ 
+document.getElementById('topfive').addEventListener('scroll', function() {
+    var scrollTop = this.scrollTop;
+    var scrollHeight = this.scrollHeight;
+    var height = this.clientHeight;
+ 
+    if (autoScroll) {
+        if (scrollTop &lt; scrollHeight - height) {
+            autoScroll = false;
+        }
+    } else {
+        if (scrollTop + height &gt;= scrollHeight) {
+            autoScroll = true;
+        }
+    }
+});
 
 
 makeAfix();
@@ -209,11 +229,17 @@ InputSome.addEventListener("focus", (e) => {
 
 const chatmessage = document.getElementById("laca");
 chatmessage.addEventListener("submit", (event) => {
+    if (autoScroll) {
+        scrollToBottom('chatBox');
+    }
     sendMessage(event);
 });
 
 const chatmessage2 = document.getElementById("playdisplay");
 chatmessage2.addEventListener("click", (event) => {
+    if (autoScroll) {
+        scrollToBottom('chatBox');
+    }
     sendMessage(event);
 });
 
