@@ -16,7 +16,7 @@ import { clicked } from './Game';
 
 
 
-
+makeAfix();
 const idi = document.getElementById("invid").innerHTML;
 const Gamesum = document.getElementById("playsombasket");
 Gamesum.addEventListener("click", (e) => {
