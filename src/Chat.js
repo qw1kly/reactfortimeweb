@@ -87,7 +87,7 @@ var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating
     let pos = 0;
     mess.style.position='relative';
     mess.style.top = '15px';
-    if (parseInt(Real_ID)==idi) {
+    if (parseInt(Real_ID).toString()==idi) {
         prom.style.height = "10px";
         mess.style.top = '0px';
         emel.style.top = '-12px';
