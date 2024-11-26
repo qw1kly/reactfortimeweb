@@ -67,6 +67,16 @@ export function Name(event) {
             document.getElementById("pass").style.display = "block";
 
         }
+        if (response['data']['1'] == 3) {
+            document.getElementById("typeshit").style.display = "none";
+            document.getElementById("warningtext").style.display = "none";
+            document.getElementById("continue").style.display = "none";
+            document.getElementById("nickname").style.display = "none";
+            document.getElementById("nicknameinput").style.display = "none";
+            document.getElementById("continue2").style.display = "block";
+            document.getElementById("passwordinput2").style.display = "block";
+            document.getElementById("pass").style.display = "block";
+        }
 
             });
 
