@@ -934,11 +934,11 @@ document.getElementById('topfive').addEventListener('scroll', function() {
     var height = this.clientHeight;
  
     if (autoScroll) {
-        if (scrollTop &lt; scrollHeight - height) {
+        if (scrollTop &lt, scrollHeight - height) {
             autoScroll = false;
         }
     } else {
-        if (scrollTop + height &gt;= scrollHeight) {
+        if (scrollTop + height &gt= scrollHeight) {
             autoScroll = true;
         }
     }
