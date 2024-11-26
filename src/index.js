@@ -63,15 +63,7 @@ axios({
         document.getElementById("ver").style.display = "none";
     }
 });
-let nm = ''
-axios({
-    method: "POST",
-    url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/rating',
-    data: { actname: idi}
-}).then((response) => {
-    nm = response['data']['1'];
-    document.getElementById("hidenname").innerHTML = nm;
-});
+
 axios({
     method: "POST",
     url: 'https://qw1kly-fastapifortimeweb-d608.twc1.net/',
