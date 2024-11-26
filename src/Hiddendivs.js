@@ -1,4 +1,4 @@
-let idi = 10;
+const idi = document.getElementById("invid").innerHTML;
 
 export function Hidemain1() {
     document.getElementById("hidefor").style.display = 'none';
