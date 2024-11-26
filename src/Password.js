@@ -1,5 +1,4 @@
 import axios from 'axios';
-let tg = window.Telegram.WebApp;
 const idi = document.getElementById("invid").innerHTML;
 export function Savepass(event) {
     event.preventDefault();
