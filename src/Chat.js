@@ -1,4 +1,13 @@
-let nm = document.getElementById("hidenname").innerHTML;
+import axios from "axios";
+let nm = '';
+axios({
+    method: "POST",
+    url: '/rating',
+    data: { actname: idi}
+}).then((response) => {
+    nm = response['data']['1'];
+    document.getElementById("hidenname").innerHTML = nm;
+});
 console.log(nm);
 const idi = document.getElementById("invid").innerHTML;
 var ws = new WebSocket("https://qw1kly-fastapifortimeweb-d608.twc1.net/ws/rating");
