@@ -31,7 +31,7 @@ MakeProf();
 Allwinners();
 axios({
     method: "POST",
-    url: '/game',
+    url: 'qw1kly-fastapifortimeweb-d608.twc1.net/game',
     data: { telegram : idi, password: localStorage.getItem("pass") }
 }).then((response) => {
         if (response['data'] === false){
