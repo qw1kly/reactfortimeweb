@@ -11,28 +11,13 @@ import { sendMessage } from './Chat';
 import { MakeProf, Sendriddle } from './Profile';
 import { closeModal, Hideallnew, Hidemain1, Hidemain2,Hidemain3,Hidemain4, Hideonlyrules, Hidesvgs, instantCopy, Showdetailstext, showModal, Showrules, instantSend,Hideonlydetail, Showmy, Showall  } from './Hiddendivs';
 import { clicked } from './Game';
+import { somedo, scrollToBottom } from "./scroll";
 
 
-function scrollToBottom() {
-    var divtopfive = document.getElementById("topfive");
-    divtopfive.scrollTop = divtopfive.scrollHeight;
-}
-var autoScroll = true;
+autoScroll = true;
  
-document.getElementById('topfive').addEventListener('scroll', function() {
-    var scrollTop = this.scrollTop;
-    var scrollHeight = this.scrollHeight;
-    var height = this.clientHeight;
- 
-    if (autoScroll) {
-        if (scrollTop &lt; scrollHeight - height) {
-            autoScroll = false;
-        }
-    } else {
-        if (scrollTop + height &gt;= scrollHeight) {
-            autoScroll = true;
-        }
-    }
+document.getElementById('topfive').addEventListener('scroll', (e) => {
+    somedo();
 });
 
 
@@ -230,7 +215,7 @@ InputSome.addEventListener("focus", (e) => {
 const chatmessage = document.getElementById("laca");
 chatmessage.addEventListener("submit", (event) => {
     if (autoScroll) {
-        scrollToBottom('chatBox');
+        scrollToBottom();
     }
     sendMessage(event);
 });
@@ -238,7 +223,7 @@ chatmessage.addEventListener("submit", (event) => {
 const chatmessage2 = document.getElementById("playdisplay");
 chatmessage2.addEventListener("click", (event) => {
     if (autoScroll) {
-        scrollToBottom('chatBox');
+        scrollToBottom();
     }
     sendMessage(event);
 });
