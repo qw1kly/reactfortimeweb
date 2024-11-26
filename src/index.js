@@ -14,10 +14,10 @@ import { clicked } from './Game';
 import { somedo, scrollToBottom } from "./scroll";
 
 
-autoScroll = true;
+var autoScroll = true;
  
 document.getElementById('topfive').addEventListener('scroll', (e) => {
-    somedo();
+    autoScroll = somedo();
 });
 
 
