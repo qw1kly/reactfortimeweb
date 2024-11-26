@@ -1,5 +1,7 @@
 import axios from "axios";
 let nm = '';
+const idi = document.getElementById("invid").innerHTML;
+
 axios({
     method: "POST",
     url: '/rating',
